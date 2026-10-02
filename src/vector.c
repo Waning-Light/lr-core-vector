@@ -1,8 +1,8 @@
 /* vector.c —— 你要实现的地方 */
 
-#include "vector.h"
-#include <stdlib.h>
-#include <string.h>
+#include"vector.h"
+#include<stdlib.h>
+#include<string.h>
 
 int vector_init(vector *v, size_t capacity) {
     if (capacity == 0) {
@@ -19,7 +19,7 @@ int vector_init(vector *v, size_t capacity) {
         return -1;
     }
 
-    int *new_data = (int *) malloc(capacity*sizeof(int));
+    int *new_data = malloc(capacity*sizeof(int));
     if (new_data == NULL) {
         v->data = NULL;
         v->end = NULL;
